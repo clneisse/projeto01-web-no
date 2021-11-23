@@ -45,7 +45,7 @@ npx ng g module grupos --routing
 #Produto
 npx ng g module produtos --routing
 
-npx ng g module clientes --routing
+npx ng g module fornecedores --routing
 
 ```
 
@@ -62,8 +62,8 @@ npx ng g c produtos/pages/cad-produto --module produtos.module --skip-tests
 npx ng g c produtos/pages/graficos --module produtos.module --skip-tests
 
 #Clientes
-npx ng g c clientes/pages/clientes --module clientes.module --skip-tests
-npx ng g c clientes/pages/cad-cliente --module clientes.module --skip-tests
+npx ng g c fornecedores/pages/fornecedores --module.fornecedores.module --skip-tests
+npx ng g c fornecedores/pages/cad-fornecedor --skip-tests
 
 
 ```
