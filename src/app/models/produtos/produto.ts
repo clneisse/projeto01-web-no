@@ -5,7 +5,8 @@ export class Produto {
     public grupoProdutoId: string
     public nome: string
     public descricao: string
-    public preco: number
+    public precoCusto: number
+    public precoVenda: number
     public urlImagem: string
     public codigoExterno: string
 

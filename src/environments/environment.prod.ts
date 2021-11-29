@@ -1,4 +1,4 @@
 export const environment = {
   production: true,  
-  apiUrl: 'https://ustart-app-api.heroku.com/',
+  apiUrl: 'https://projeto01-ustart.heroku.com/',
 };

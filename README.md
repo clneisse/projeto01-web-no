@@ -47,6 +47,9 @@ npx ng g module produtos --routing
 
 npx ng g module fornecedores --routing
 
+npx ng g module orcamentos --routing
+npx ng g module fornecedores --routing
+
 ```
 
 ## Criar um componente
@@ -62,8 +65,8 @@ npx ng g c produtos/pages/cad-produto --module produtos.module --skip-tests
 npx ng g c produtos/pages/graficos --module produtos.module --skip-tests
 
 #Clientes
-npx ng g c fornecedores/pages/fornecedores --module.fornecedores.module --skip-tests
-npx ng g c fornecedores/pages/cad-fornecedor --skip-tests
+npnpm x ng g c fornecedores/pages/fornecedores --module fornecedores.module --skip-tests
+npx ng g c fornecedores/pages/cad-fornecedor --module fornecedores.module --skip-tests
 
 
 ```

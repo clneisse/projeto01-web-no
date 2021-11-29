@@ -6,13 +6,21 @@ export const AppRoutes = {
     base: () => "usuarios",
     CadUsuario: () => { return AppRoutes.Users.base() + "/cad-usuario" },
   },
+  FormaPagamento: {
+    base: () => "forma-pagamento",
+    Cadastro: () => { return AppRoutes.FormaPagamento.base() + "/cad-forma-pagamento" },
+  },
+  Orcamento: {
+    base: () => "orcamentos",
+    Cadastro: () => { return AppRoutes.Orcamento.base() + "/cad-orcamento" },
+  },
   Grupos: {
     base: () => "grupos",
     CadGrupo: () => { return AppRoutes.Grupos.base() + "/cad-grupo" }    
   },
-  Clientes: {
-    base: () => "clientes",
-    CadCliente: () => { return AppRoutes.Clientes.base() + "/cad-cliente" }    
+  Fornecedores: {
+    base: () => "fornecedores",
+    CadFornecedor: () => { return AppRoutes.Fornecedores.base() + "/cad-fornecedor" }    
   },
   Produtos: {
     base: () => "produtos",

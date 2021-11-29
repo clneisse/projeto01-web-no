@@ -8,17 +8,7 @@
 
 <div class="padding_form">
 
-    <div nz-row>
-        <div nz-col nzSm="24">
-            <nz-form-item>
-                <nz-radio-group [(ngModel)]="pessoaJuridica" (ngModelChange)="pessoaJuridicaChange()">
-                    <label nz-radio [nzValue]="true">Pessoa Jurídica</label>
-                    <label nz-radio [nzValue]="false">Pessoa Física</label>
-                </nz-radio-group>
-            </nz-form-item>
-        </div>
-    </div>
-    <form nz-form [formGroup]="form" *ngIf="cliente">
+    <form nz-form [formGroup]="form" *ngIf="fornecedor">
         <div nz-row>
             <div nz-col nzSm="24">
                 <nz-form-item>
@@ -35,37 +25,24 @@
                     </nz-form-control>
                 </nz-form-item>
             </div>
-            <ng-container *ngIf="pessoaJuridica">
-                <div nz-col nzSm="24">
-                    <nz-form-label nzFor="nome" [nzNoColon]="true">Razão Social</nz-form-label>
-                    <nz-form-item>
-                        <nz-form-control [nzSpan]="24" nzErrorTip="Campo requerido">
-                            <input nz-input placeholder="Digite aqui..." formControlName="razaoSocial"
-                                id="razaoSocial" />
-                        </nz-form-control>
-                    </nz-form-item>
-                </div>
-                <div nz-col nzSm="24">
-                    <nz-form-label nzFor="nome" [nzNoColon]="true">CNPJ</nz-form-label>
-                    <nz-form-item>
-                        <nz-form-control [nzSpan]="24" nzErrorTip="Campo requerido">
-                            <input nz-input placeholder="Digite aqui..." formControlName="cnpj" id="cnpj"
-                                mask="00.000.000/0000-00" />
-                        </nz-form-control>
-                    </nz-form-item>
-                </div>
-            </ng-container>
-            <ng-container *ngIf="pessoaJuridica == false">
-                <div nz-col nzSm="24">
-                    <nz-form-label nzFor="nome" [nzNoColon]="true">CPF</nz-form-label>
-                    <nz-form-item>
-                        <nz-form-control [nzSpan]="24" nzErrorTip="Campo requerido">
-                            <input nz-input placeholder="Digite aqui..." formControlName="cpf" id="cpf"
-                                mask="000.000.000-00" />
-                        </nz-form-control>
-                    </nz-form-item>
-                </div>
-            </ng-container>
+            <div nz-col nzSm="24">
+                <nz-form-label nzFor="nome" [nzNoColon]="true">Razão Social</nz-form-label>
+                <nz-form-item>
+                    <nz-form-control [nzSpan]="24" nzErrorTip="Campo requerido">
+                        <input nz-input placeholder="Digite aqui..." formControlName="razaoSocial"
+                            id="razaoSocial" />
+                    </nz-form-control>
+                </nz-form-item>
+            </div>
+            <div nz-col nzSm="24">
+                <nz-form-label nzFor="nome" [nzNoColon]="true">CNPJ</nz-form-label>
+                <nz-form-item>
+                    <nz-form-control [nzSpan]="24" nzErrorTip="Campo requerido">
+                        <input nz-input placeholder="Digite aqui..." formControlName="cnpj" id="cnpj"
+                            mask="00.000.000/0000-00" />
+                    </nz-form-control>
+                </nz-form-item>
+            </div>
             <div nz-col nzSm="24">
                 <nz-form-label nzFor="nome" [nzNoColon]="true">Rua</nz-form-label>
                 <nz-form-item>
@@ -160,15 +137,6 @@
                 <nz-form-item>
                     <nz-form-control [nzSpan]="24" nzErrorTip="E-mail inválido">
                         <input nz-input placeholder="Digite aqui..." formControlName="email" id="email" />
-                    </nz-form-control>
-                </nz-form-item>
-            </div>
-            <div nz-col nzSm="24">
-                <nz-form-label nzFor="nome" [nzNoColon]="true">Limite de crédito</nz-form-label>
-                <nz-form-item>
-                    <nz-form-control [nzSpan]="24" nzErrorTip="Campo requerido">
-                        <input nz-input placeholder="Digite aqui..." formControlName="limiteDeCredito"
-                            id="limiteDeCredito" />
                     </nz-form-control>
                 </nz-form-item>
             </div>

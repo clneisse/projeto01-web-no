@@ -29,6 +29,26 @@
                     </nz-form-control>
                 </nz-form-item>
             </div>
+            <div nz-row>
+                <div nz-col nzSm="24">
+                    <nz-form-label nzFor="nome" [nzNoColon]="true">Fornecedor</nz-form-label>
+                    <nz-form-item>                    
+                        <nz-form-control [nzSpan]="24" nzErrorTip="Campo requerido">                        
+                            <nz-select nzShowSearch nzAllowClear [(ngModel)]="fornecedorSelecionado"
+                                [nzPlaceHolder]="carregandoFornecedores ? 'Carregando...' : 'Selecione...'"
+                                formControlName="fornecedorId">
+                                <ng-container *ngFor="let fornecedor of fornecedores">
+                                    <nz-option *ngIf="!carregandoFornecedores" [nzLabel]="fornecedor.nome" [nzValue]="grupo.id">
+                                    </nz-option>
+                                </ng-container>
+                                <nz-option *ngIf="carregandoFornecedores" nzDisabled nzCustomContent>
+                                    <i nz-icon nzType="loading" class="loading-icon"></i>
+                                    Carregando...
+                                </nz-option>
+                            </nz-select>
+                        </nz-form-control>
+                    </nz-form-item>
+                </div>
             <div nz-col nzSm="24">
                 <nz-form-label nzFor="nome" [nzNoColon]="true">Nome</nz-form-label>
                 <nz-form-item>
@@ -46,10 +66,18 @@
                 </nz-form-item>
             </div>
             <div nz-col nzSm="24">
-                <nz-form-label nzFor="nome" [nzNoColon]="true">Preço</nz-form-label>
+                <nz-form-label nzFor="nome" [nzNoColon]="true">Preço de Custo</nz-form-label>
                 <nz-form-item>
                     <nz-form-control [nzSpan]="24" nzErrorTip="Campo requerido">
-                        <input nz-input placeholder="Digite aqui..." formControlName="preco" id="preco" />
+                        <input nz-input placeholder="Digite aqui..." formControlName="precoCusto" id="precoCusto" />
+                    </nz-form-control>
+                </nz-form-item>
+            </div>
+            <div nz-col nzSm="24">
+                <nz-form-label nzFor="nome" [nzNoColon]="true">Preço de Venda</nz-form-label>
+                <nz-form-item>
+                    <nz-form-control [nzSpan]="24" nzErrorTip="Campo requerido">
+                        <input nz-input placeholder="Digite aqui..." formControlName="precoVenda" id="precoVenda" />
                     </nz-form-control>
                 </nz-form-item>
             </div>
