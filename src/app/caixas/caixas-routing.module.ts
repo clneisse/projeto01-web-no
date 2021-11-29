@@ -1,7 +1,7 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { CadCaixaComponent } from './pages/cad-caixa/cad-caixa.component';
-import { CaixaComponent } from './pages/caixa/caixa.component';
+import { CadCaixaComponent } from './pages/componentes/cad-caixa/cad-caixa.component';
+import { CaixaComponent } from './pages/componentes/caixa/caixa.component';
 
 const routes: Routes = [
   { path: '', component: CaixaComponent },

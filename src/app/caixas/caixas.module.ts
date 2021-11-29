@@ -2,8 +2,8 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
 import { CaixasRoutingModule } from './caixas-routing.module';
-import { CaixaComponent } from './pages/caixa/caixa.component';
-import { CadCaixaComponent } from './pages/cad-caixa/cad-caixa.component';
+import { CaixaComponent } from './pages/componentes/caixa/caixa.component';
+import { CadCaixaComponent } from './pages/componentes/cad-caixa/cad-caixa.component';
 import { NzPageHeaderModule } from 'ng-zorro-antd/page-header';
 import { NzLayoutModule } from 'ng-zorro-antd/layout';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';

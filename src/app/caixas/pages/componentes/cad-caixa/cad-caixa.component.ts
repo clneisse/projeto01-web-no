@@ -12,7 +12,7 @@ import { Caixa } from 'src/app/models/caixa/caixa';
 import { getISOWeek } from 'date-fns';
 import { pt_BR, NzI18nService } from 'ng-zorro-antd/i18n';
 import { CaixaItem } from 'src/app/models/caixa/caixa-item';
-import { ModalItemCaixaComponent } from '../componentes/modal-item-caixa/modal-item-caixa.component';
+import { ModalItemCaixaComponent } from '../modal-item-caixa/modal-item-caixa.component';
 
 @Component({
   selector: 'app-cad-caixa',
