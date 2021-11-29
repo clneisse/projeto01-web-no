@@ -9,13 +9,13 @@
 
 <div class="padding_form">
 
-    <form nz-form [formGroup]="form" *ngIf="orcamento">
+    <form nz-form [formGroup]="form" *ngIf="caixa">
         <div nz-row>
             <div nz-col nzSm="24">
                 <nz-form-label nzFor="nome" [nzNoColon]="true">Data</nz-form-label>
                 <nz-form-item>
                     <nz-form-control [nzSpan]="24" nzErrorTip="Campo requerido">
-                        <nz-date-picker formControlName="dataOrcamento" nzFormat="dd/MM/yyyy"></nz-date-picker>
+                        <nz-date-picker formControlName="dataCaixa" nzFormat="dd/MM/yyyy"></nz-date-picker>
                     </nz-form-control>
                 </nz-form-item>
             </div>
@@ -98,7 +98,7 @@
         </div>
         <div nz-row>
             <div nz-col nzSpan="24">
-                <nz-table #dados [nzData]="orcamentoItens" nzSize="small" [nzFrontPagination]="false"
+                <nz-table #dados [nzData]="caixaItens" nzSize="small" [nzFrontPagination]="false"
                     [nzBordered]="true" [nzScroll]="{ y: '450px' }">
                     <thead>
                         <tr>

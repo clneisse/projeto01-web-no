@@ -1,9 +1,9 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
-import { OrcamentosRoutingModule } from './orcamentos-routing.module';
-import { OrcamentoComponent } from './pages/orcamento/orcamento.component';
-import { CadOrcamentoComponent } from './pages/cad-orcamento/cad-orcamento.component';
+import { CaixasRoutingModule } from './caixas-routing.module';
+import { CaixaComponent } from './pages/caixa/caixa.component';
+import { CadCaixaComponent } from './pages/cad-caixa/cad-caixa.component';
 import { NzPageHeaderModule } from 'ng-zorro-antd/page-header';
 import { NzLayoutModule } from 'ng-zorro-antd/layout';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
@@ -19,17 +19,17 @@ import { NzSpinModule } from 'ng-zorro-antd/spin';
 import { NzSelectModule } from 'ng-zorro-antd/select';
 import { NzImageModule } from 'ng-zorro-antd/image';
 import { NzDatePickerModule } from 'ng-zorro-antd/date-picker';
-import { ModalItemOrcamentoComponent } from './pages/componentes/modal-item-orcamento/modal-item-orcamento.component';
+import { ModalItemCaixaComponent } from './pages/componentes/modal-item-caixa/modal-item-caixa.component';
 
 @NgModule({
   declarations: [
-    OrcamentoComponent,
-    CadOrcamentoComponent,
-    ModalItemOrcamentoComponent
+    CaixaComponent,
+    CadCaixaComponent,
+    ModalItemCaixaComponent
   ],
   imports: [
     CommonModule,
-    OrcamentosRoutingModule,
+    CaixasRoutingModule,
     NzPageHeaderModule,
     NzLayoutModule,    
     FormsModule,
@@ -48,4 +48,4 @@ import { ModalItemOrcamentoComponent } from './pages/componentes/modal-item-orca
     NzDatePickerModule
   ]
 })
-export class OrcamentosModule { }
+export class CaixasModule { }

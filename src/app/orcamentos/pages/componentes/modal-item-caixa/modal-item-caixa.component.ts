@@ -3,18 +3,18 @@ import { FormControl, FormGroup, Validators } from '@angular/forms';
 import { NzModalService } from 'ng-zorro-antd/modal';
 import { ProdutoService } from 'src/app/data-services/produto.service';
 import { AssignFormHelper } from 'src/app/helper/AssignFormHelper';
-import { OrcamentoItem } from 'src/app/models/orcamento/orcamento-item';
+import { CaixaItem } from 'src/app/models/caixa/caixa-item';
 import { Produto } from 'src/app/models/produtos/produto';
 
 @Component({
-  selector: 'app-modal-item-orcamento',
-  templateUrl: './modal-item-orcamento.component.html',
-  styleUrls: ['./modal-item-orcamento.component.scss']
+  selector: 'app-modal-item-caixa',
+  templateUrl: './modal-item-caixa.component.html',
+  styleUrls: ['./modal-item-caixa.component.scss']
 })
-export class ModalItemOrcamentoComponent implements OnInit {
+export class ModalItemCaixaComponent implements OnInit {
 
 
-  public orcamentoItem: OrcamentoItem
+  public caixaItem: CaixaItem
 
   public saldoEstoque:Number;
 
@@ -44,19 +44,19 @@ export class ModalItemOrcamentoComponent implements OnInit {
 
   private carregarDados() {
 
-    this.form.get("produtoId").setValue(this.orcamentoItem.produtoId);
-    this.form.get("observacao").setValue(this.orcamentoItem.observacao);
-    this.form.get("quantidade").setValue(this.orcamentoItem.quantidade);
-    this.form.get("precoUnitario").setValue(this.orcamentoItem.precoUnitario);
-    this.form.get("desconto").setValue(this.orcamentoItem.desconto);
+    this.form.get("produtoId").setValue(this.caixaItem.produtoId);
+    this.form.get("observacao").setValue(this.caixaItem.observacao);
+    this.form.get("quantidade").setValue(this.caixaItem.quantidade);
+    this.form.get("precoUnitario").setValue(this.caixaItem.precoUnitario);
+    this.form.get("desconto").setValue(this.caixaItem.desconto);
 
-    this.form.get("totalUnitario").setValue(this.orcamentoItem.totalUnitario);
+    this.form.get("totalUnitario").setValue(this.caixaItem.totalUnitario);
     this.form.get("totalUnitario").disable();
 
-    this.form.get("totalItem").setValue(this.orcamentoItem.totalItem);
+    this.form.get("totalItem").setValue(this.caixaItem.totalItem);
     this.form.get("totalItem").disable();
 
-    var produto = this.orcamentoItem.produto;
+    var produto = this.caixaItem.produto;
     if (produto) {
       this.produtoSel = produto.id;
     }
@@ -84,34 +84,34 @@ export class ModalItemOrcamentoComponent implements OnInit {
 
     var produto = this.produtos.find((p) => p.id == event)
     if (produto) {
-      this.form.get("precoUnitario").setValue(produto.preco);
-      this.orcamentoItem.produto = produto;
+      this.form.get("precoUnitario").setValue(produto.precoVenda);
+      this.caixaItem.produto = produto;
       this.calcularTotais();
     }
   }
 
   public calcularTotais() {
     
-    let preco = Number(this.form.get("precoUnitario").value)
+    let precoVenda = Number(this.form.get("precoUnitario").value)
     let quantidade = Number(this.form.get("quantidade").value)
     let desconto = Number(this.form.get("desconto").value)
 
-    let totalUni = preco * quantidade;
-    let totalDesconto = (preco * (desconto / 100)) * quantidade;
+    let totalUni = precoVenda * quantidade;
+    let totalDesconto = (precoVenda * (desconto / 100)) * quantidade;
     let totalItem = totalUni - totalDesconto;
 
     this.form.get("totalUnitario").setValue(totalUni);
     this.form.get("totalItem").setValue(totalItem);
 
-    this.orcamentoItem.totalUnitario = totalUni;
-    this.orcamentoItem.totalItem = totalItem;
+    this.caixaItem.totalUnitario = totalUni;
+    this.caixaItem.totalItem = totalItem;
   }
 
   public formValido(): boolean{
 
     this.calcularTotais();    
 
-    AssignFormHelper.assignFormValues<OrcamentoItem>(this.form, this.orcamentoItem);
+    AssignFormHelper.assignFormValues<CaixaItem>(this.form, this.caixaItem);
 
     return this.form.valid;
   }

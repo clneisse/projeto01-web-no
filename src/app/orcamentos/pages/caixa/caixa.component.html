@@ -22,7 +22,7 @@
         </nz-row>
     </div>
     <nz-spin nzTip="Consultando..." [nzSpinning]="false">
-        <nz-table #dados [nzData]="orcamentos" [nzLoading]="loading" nzSize="small" [nzFrontPagination]="false"
+        <nz-table #dados [nzData]="caixa" [nzLoading]="loading" nzSize="small" [nzFrontPagination]="false"
             [nzBordered]="true" [nzScroll]="{ y: '450px' }">
             <thead>
                 <tr>
@@ -44,7 +44,7 @@
                         </button>
                     </td>
                     <td>{{item.usuario.nome}}</td>
-                    <td>{{item.dataOrcamento | date: 'dd/MM/yyyy' }}</td>
+                    <td>{{item.dataCaixa | date: 'dd/MM/yyyy' }}</td>
                     <td>{{item.formaPagamento.descricao}}</td>                    
                     <td>{{item.totalProdutos}}</td>                    
                 </tr>
