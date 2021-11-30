@@ -2,10 +2,10 @@ import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { NzModalService } from 'ng-zorro-antd/modal';
 import { AppRoutes } from 'src/app/app-routes';
-import { LoadingService } from 'src/app/core/components/loading/loading.service';
 import { FormaPagamentoService } from 'src/app/data-services/forma-pagamento.service';
 import { FormaPagamento } from 'src/app/models/forma-pagamento/forma-pagamento';
 import { debounce } from 'lodash';
+import { LoadingService } from 'src/app/core/components/uv-loading/loading.service';
 
 @Component({
   selector: 'app-forma-pagamento',
@@ -20,6 +20,7 @@ export class FormaPagamentoComponent implements OnInit {
   constructor(
     private router: Router,
     private formaPagamentoService: FormaPagamentoService,
+    private loadingService: LoadingService,
     private modalService: NzModalService
   ) {
 
