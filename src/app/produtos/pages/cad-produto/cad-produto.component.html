@@ -38,7 +38,7 @@
                                 [nzPlaceHolder]="carregandoFornecedores ? 'Carregando...' : 'Selecione...'"
                                 formControlName="fornecedorId">
                                 <ng-container *ngFor="let fornecedor of fornecedores">
-                                    <nz-option *ngIf="!carregandoFornecedores" [nzLabel]="fornecedor.nome" [nzValue]="grupo.id">
+                                    <nz-option *ngIf="!carregandoFornecedores" [nzLabel]="fornecedor.nome" [nzValue]="fornecedor.id">
                                     </nz-option>
                                 </ng-container>
                                 <nz-option *ngIf="carregandoFornecedores" nzDisabled nzCustomContent>
