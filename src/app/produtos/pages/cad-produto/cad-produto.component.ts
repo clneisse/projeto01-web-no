@@ -9,6 +9,7 @@ import { AssignFormHelper } from 'src/app/helper/AssignFormHelper';
 import { Grupo } from 'src/app/models/grupos/grupo';
 import { Fornecedor } from 'src/app/models/fornecedores/fornecedor';
 import { Produto } from 'src/app/models/produtos/produto';
+import { FornecedorService } from 'src/app/data-services/fornecedor.service';
 
 @Component({
   selector: 'app-cad-produto',
@@ -89,7 +90,7 @@ export class CadProdutoComponent implements OnInit {
     this.carregandoFornecedores = true;
 
     this.fornecedorService.get("").subscribe(
-      (grupos) => {
+      (fornecedores) => {
         this.carregandoFornecedores = false;
         this.fornecedores = fornecedores;
       },

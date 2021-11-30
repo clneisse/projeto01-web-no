@@ -3,6 +3,7 @@ import { v4 as uuidv4 } from 'uuid';
 export class Produto {
     public id: string
     public grupoProdutoId: string
+    public fornecedorId: string
     public nome: string
     public descricao: string
     public precoCusto: number
