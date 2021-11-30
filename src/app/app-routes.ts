@@ -10,9 +10,9 @@ export const AppRoutes = {
     base: () => "forma-pagamento",
     Cadastro: () => { return AppRoutes.FormaPagamento.base() + "/cad-forma-pagamento" },
   },
-  Orcamento: {
-    base: () => "orcamentos",
-    Cadastro: () => { return AppRoutes.Orcamento.base() + "/cad-orcamento" },
+  Caixa: {
+    base: () => "caixas",
+    Cadastro: () => { return AppRoutes.Caixa.base() + "/cad-caixa" },
   },
   Grupos: {
     base: () => "grupos",

@@ -22,6 +22,16 @@ const routes: Routes = [
     canActivate: [AuthGuard]
   },
   {
+    path: AppRoutes.FormaPagamento.base(),
+    loadChildren: () => import('./forma-pagamento/forma-pagamento.module').then(m => m.FormaPagamentoModule),
+    canActivate: [AuthGuard]
+  },
+  {
+    path: AppRoutes.Caixa.base(),
+    loadChildren: () => import('./caixas/caixas.module').then(m => m.CaixasModule),
+    canActivate: [AuthGuard]
+  },
+  {
     path: AppRoutes.Produtos.base(),
     loadChildren: () => import('./produtos/produtos.module').then(m => m.ProdutosModule),
     canActivate: [AuthGuard]

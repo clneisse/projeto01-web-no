@@ -1,4 +1,24 @@
 <ul nz-menu nzTheme="dark" nzMode="inline" [nzInlineCollapsed]="isCollapsed">
+    <li nz-submenu nzTitle="Registro de Caixa" nzIcon="user">
+        <ul>
+            <li nz-menu-item nzMatchRouter [nzMatchRouterExact]="true">
+                <a routerLink="/caixas">Consulta</a>
+            </li>
+            <li nz-menu-item nzMatchRouter [nzMatchRouterExact]="true">
+                <a routerLink="/caixas/cad-caixa">Novo</a>
+            </li>
+        </ul>
+    </li>    
+    <li nz-submenu nzTitle="Formas de Pagamento" nzIcon="user">
+        <ul>
+            <li nz-menu-item nzMatchRouter [nzMatchRouterExact]="true">
+                <a routerLink="/forma-pagamento">Consulta</a>
+            </li>
+            <li nz-menu-item nzMatchRouter [nzMatchRouterExact]="true">
+                <a routerLink="/forma-pagamento/cad-forma-pagamento">Novo</a>
+            </li>
+        </ul>
+    </li>    
     <li nz-submenu nzTitle="Fornecedor" nzIcon="user">
         <ul>
             <li nz-menu-item nzMatchRouter [nzMatchRouterExact]="true">

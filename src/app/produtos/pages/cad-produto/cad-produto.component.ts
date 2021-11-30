@@ -25,6 +25,10 @@ export class CadProdutoComponent implements OnInit {
   public carregandoGrupos: boolean = false;
   public grupoSelecionado: string;
 
+  public fornecedores: Fornecedor[] = []
+  public carregandoFornecedores: boolean = false;
+  public fornecedorSelecionado: string;
+
   public form: FormGroup = new FormGroup({
     grupoProdutoId: new FormControl(null, [Validators.required]),
     fornecedorId: new FormControl(null, [Validators.required]),
@@ -42,7 +46,7 @@ export class CadProdutoComponent implements OnInit {
     private activatedRoute: ActivatedRoute,
     private produtoService: ProdutoService,
     private grupoService: GrupoService,
-    private fornecedorService: FornecedorService
+    private fornecedorService: FornecedorService,
     private modalService: NzModalService
   ) {
     this.activatedRoute.params.subscribe((param) => {
@@ -61,6 +65,7 @@ export class CadProdutoComponent implements OnInit {
 
   ngOnInit(): void {
     this.carregarGrupos();
+    this.carregarFornecedores();
   }
 
   private carregarGrupos() {
@@ -79,6 +84,7 @@ export class CadProdutoComponent implements OnInit {
         });        
       });
   }
+
   private carregarFornecedores() {
     this.carregandoFornecedores = true;
 
@@ -95,6 +101,7 @@ export class CadProdutoComponent implements OnInit {
         });        
       });
   }
+  
   private pesquisarPorId() {
     this.produtoService.getById(this.idSelecionado).subscribe(
       (result) => {
