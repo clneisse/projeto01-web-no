@@ -88,9 +88,11 @@ export class CadCaixaComponent implements OnInit {
   private carregarFormasPgto() {
     this.formaPgtService.get("").subscribe(
       (result) => {
+        this.carregandoFormasPgto = false;
         this.formasPagamentos = result;
       },
       (error) => {
+        this.carregandoFormasPgto = false;
         this.modalService.error({
           nzTitle: 'Falha ao carregar as formas de pagamento',
           nzContent: 'Não foi possível carregar a lista de formas de pagamento.'
