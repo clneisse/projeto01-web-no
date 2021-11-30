@@ -22,12 +22,11 @@
         </nz-row>
     </div>
     <nz-spin nzTip="Consultando..." [nzSpinning]="false">
-        <nz-table #dados [nzData]="caixa" [nzLoading]="loading" nzSize="small" [nzFrontPagination]="false"
+        <nz-table #dados [nzData]="caixas" [nzLoading]="loading" nzSize="small" [nzFrontPagination]="false"
             [nzBordered]="true" [nzScroll]="{ y: '450px' }">
             <thead>
                 <tr>
                     <th nzWidth="150px">Ações</th>
-                    <th nzWidth="250px">Nome</th>
                     <th>Data</th>
                     <th>Forma Pgto</th>
                     <th>Total</th>
@@ -43,7 +42,6 @@
                             <i nz-icon nzType="delete"></i>
                         </button>
                     </td>
-                    <td>{{item.usuario.nome}}</td>
                     <td>{{item.dataCaixa | date: 'dd/MM/yyyy' }}</td>
                     <td>{{item.formaPagamento.descricao}}</td>                    
                     <td>{{item.totalProdutos}}</td>                    
