@@ -117,6 +117,10 @@ export class CadProdutoComponent implements OnInit {
     this.router.navigateByUrl(AppRoutes.Produto.base());
   }
 
+  public voltar():void{    
+    this.router.navigateByUrl(AppRoutes.Produto.base());
+  }  
+
   public salvar(): void {
 
     //Passa os valores do form para o objeto

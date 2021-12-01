@@ -16,14 +16,14 @@ export const AppRoutes = {
   },
   Grupos: {
     base: () => "grupos",
-    CadGrupo: () => { return AppRoutes.Grupos.base() + "/cad-grupo" }    
+    CadGrupo: () => { return AppRoutes.Grupos.base() + "/cad-grupo" },    
   },
   Fornecedores: {
     base: () => "fornecedores",
-    CadFornecedor: () => { return AppRoutes.Fornecedores.base() + "/cad-fornecedor" }    
+    CadFornecedor: () => { return AppRoutes.Fornecedores.base() + "/cad-fornecedor" },    
   },
   Produto: {
     base: () => "produtos",
-    Cadastro: () => { return AppRoutes.Produto.base() + "/cad-produto" }    
+    Cadastro: () => { return AppRoutes.Produto.base() + "/cad-produto" },    
   },
 };
