@@ -32,7 +32,7 @@ const routes: Routes = [
     canActivate: [AuthGuard]
   },
   {
-    path: AppRoutes.Produtos.base(),
+    path: AppRoutes.Produto.base(),
     loadChildren: () => import('./produtos/produtos.module').then(m => m.ProdutosModule),
     canActivate: [AuthGuard]
   },
