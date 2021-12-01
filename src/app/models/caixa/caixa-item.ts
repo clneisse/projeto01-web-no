@@ -6,7 +6,7 @@ export class CaixaItem {
     public id: string
     public caixaId: string    
     public produtoId: string    
-    public produto: Produto    
+    public produto: Produto
     public observacao: string
     public quantidade: number
     public precoUnitario: number
