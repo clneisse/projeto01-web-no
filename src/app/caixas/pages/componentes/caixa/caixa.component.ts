@@ -39,7 +39,7 @@ export class CaixaComponent implements OnInit {
 
   public localizar(event: any): void {
     const value = event.target.value;
-    this.pesquisar(value);    
+    this.pesquisar(value); 
   }
 
   private pesquisar(pesquisa: string): void {

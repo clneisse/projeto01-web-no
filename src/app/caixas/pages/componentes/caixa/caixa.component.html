@@ -1,4 +1,4 @@
-<nz-page-header nzTitle="Consulta de registro">
+<nz-page-header nzTitle="Consulta de registros">
     <nz-page-header-extra>
         <button nz-button nzType="primary" (click)="novo()"><i nz-icon nzType="plus"></i>Novo</button>
     </nz-page-header-extra>
@@ -27,6 +27,7 @@
             <thead>
                 <tr>
                     <th nzWidth="150px">Ações</th>
+                    <th nzWidth="250px">Nome</th>
                     <th>Data</th>
                     <th>Forma Pgto</th>
                     <th>Total</th>
@@ -42,6 +43,7 @@
                             <i nz-icon nzType="delete"></i>
                         </button>
                     </td>
+                    <td>{{item.usuarioId}}</td>
                     <td>{{item.dataCaixa | date: 'dd/MM/yyyy' }}</td>
                     <td>{{item.formaPagamento.descricao}}</td>                    
                     <td>{{item.totalProdutos}}</td>                    
