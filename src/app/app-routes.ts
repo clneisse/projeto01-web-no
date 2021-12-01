@@ -22,8 +22,8 @@ export const AppRoutes = {
     base: () => "fornecedores",
     CadFornecedor: () => { return AppRoutes.Fornecedores.base() + "/cad-fornecedor" }    
   },
-  Produtos: {
+  Produto: {
     base: () => "produtos",
-    CadProduto: () => { return AppRoutes.Produtos.base() + "/cad-produto" }    
+    CadProduto: () => { return AppRoutes.Produto.base() + "/cad-produto" }    
   },
 };

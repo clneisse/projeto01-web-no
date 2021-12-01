@@ -2,7 +2,7 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
 import { ProdutosRoutingModule } from './produtos-routing.module';
-import { ProdutosComponent } from './pages/produtos/produtos.component';
+import { ProdutoComponent } from './pages/produto/produto.component';
 import { CadProdutoComponent } from './pages/cad-produto/cad-produto.component';
 
 import { NzPageHeaderModule } from 'ng-zorro-antd/page-header';
@@ -25,7 +25,7 @@ import { NzRateModule } from 'ng-zorro-antd/rate';
 
 @NgModule({
   declarations: [
-    ProdutosComponent,
+    ProdutoComponent,
     CadProdutoComponent
   ],
   imports: [
