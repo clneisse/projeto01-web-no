@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
 import { ActivatedRoute, Router } from '@angular/router';
 import { AppRoutes } from 'src/app/app-routes';
-import { GrupoService } from 'src/app/data-services/grupos.service';
+import { GrupoService } from 'src/app/data-services/grupo.service';
 import { AssignFormHelper } from 'src/app/helper/AssignFormHelper';
 import { Grupo } from 'src/app/models/grupos/grupo';
 

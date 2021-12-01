@@ -24,6 +24,6 @@ export const AppRoutes = {
   },
   Produto: {
     base: () => "produtos",
-    CadProduto: () => { return AppRoutes.Produto.base() + "/cad-produto" }    
+    Cadastro: () => { return AppRoutes.Produto.base() + "/cad-produto" }    
   },
 };

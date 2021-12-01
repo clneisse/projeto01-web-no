@@ -9,6 +9,7 @@ import { ProdutoService } from 'src/app/data-services/produto.service';
 import { AssignFormHelper } from 'src/app/helper/AssignFormHelper';
 import { Grupo } from 'src/app/models/grupos/grupo';
 import { Produto } from 'src/app/models/produtos/produto';
+import { Fornecedor } from 'src/app/models/fornecedores/fornecedor';
 
 @Component({
   selector: 'app-cad-produto',

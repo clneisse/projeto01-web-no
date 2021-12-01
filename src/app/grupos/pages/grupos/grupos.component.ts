@@ -3,7 +3,7 @@ import { Router } from '@angular/router';
 import { debounce } from 'lodash';
 import { NzModalService } from 'ng-zorro-antd/modal';
 import { AppRoutes } from 'src/app/app-routes';
-import { GrupoService } from 'src/app/data-services/grupos.service';
+import { GrupoService } from 'src/app/data-services/grupo.service';
 import { Grupo } from 'src/app/models/grupos/grupo';
 
 @Component({
